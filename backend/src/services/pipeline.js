@@ -1,7 +1,6 @@
 const { v4: uuid } = require('uuid');
 
-// Mirrors the reference demo's STEPS array — same status vocabulary, so the
-// contract is easy to sanity-check against app-demo.html by eye.
+// Mirrors the reference demo's STEPS array — same status vocabulary, so the contract is easy to sanity-check against app-demo.html by eye.
 const STEPS = [
   { key: 'STYLE', label: 'Style', status: 'STYLE_SET' },
   { key: 'CHARACTERS', label: 'Characters', status: 'CHARACTERS_GENERATED' },
@@ -21,11 +20,6 @@ function stepForKey(stepKey) {
   return step;
 }
 
-// A step is only runnable if it's exactly the next one in sequence. This is
-// the server-side version of what the spec's §4.3 "can't run before previous
-// steps succeeded" requires — the demo enforces this only via which button
-// happens to render, which is not enforcement at all from an API's
-// perspective (nothing stops a direct fetch to a later step).
 function nextRunnableStep(project) {
   const idx = statusIndex(project.status);
   if (idx === STATUS_ORDER.length - 1) return null; // DONE
