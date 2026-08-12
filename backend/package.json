@@ -1,0 +1,15 @@
+{
+  "name": "book-illustration-backend",
+  "version": "1.0.0",
+  "description": "Backend for the book illustration pipeline take-home",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "uuid": "^14.0.1"
+  }
+}
