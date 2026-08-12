@@ -1,0 +1,144 @@
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  background: #f7f7fb;
+  color: #1a1a2e;
+}
+.container { max-width: 720px; margin: 0 auto; padding: 32px 20px; }
+.wide { max-width: 960px; }
+
+/* ---- Identity ---- */
+.auth-box {
+  max-width: 400px;
+  margin: 80px auto;
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.auth-box h1 { font-size: 20px; margin-top: 0; }
+label { display: block; font-size: 13px; font-weight: 600; margin: 14px 0 6px; color: #555; }
+input[type=text], input[type=email], textarea {
+  width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px;
+  font-size: 14px; font-family: inherit;
+}
+textarea { resize: vertical; min-height: 120px; }
+.field-error { color: #c0392b; font-size: 12px; margin-top: 4px; }
+button {
+  cursor: pointer; border: none; border-radius: 8px; font-size: 14px;
+  font-weight: 600; padding: 10px 18px; font-family: inherit;
+}
+.btn-primary { background: #4b3fce; color: white; width: 100%; margin-top: 20px; }
+.btn-primary:disabled { background: #b7b2ee; cursor: not-allowed; }
+.btn-secondary { background: #eee; color: #333; }
+.btn-link { background: none; color: #4b3fce; padding: 4px; }
+
+/* ---- Back link (New project / Project detail) ---- */
+.back-link {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 13px;
+  color: #666; text-decoration: none; cursor: pointer; margin-bottom: 18px;
+  background: none; border: none; padding: 0; font-family: inherit;
+}
+.back-link:hover { color: #4b3fce; }
+
+/* ---- Book text dropzone (New project) ---- */
+.dropzone {
+  border: 1.5px dashed #ccc; border-radius: 10px; padding: 28px 20px;
+  text-align: center; background: #fafafd; color: #666; margin-bottom: 4px;
+  cursor: pointer; transition: border-color 0.15s, background 0.15s;
+}
+.dropzone:hover, .dropzone:focus-visible { border-color: #4b3fce; outline: none; }
+.dropzone.dragover { border-color: #4b3fce; background: #f0eefd; }
+.dropzone.has-file { border-style: solid; border-color: #4b3fce; color: #1a1a2e; background: #f6f5ff; }
+.dropzone .dz-label { font-size: 13px; font-weight: 600; color: inherit; }
+.dropzone .dz-hint { font-size: 12px; margin-top: 6px; color: #999; }
+.divider-or {
+  display: flex; align-items: center; gap: 10px; color: #aaa; font-size: 11px;
+  margin: 14px 0; text-transform: uppercase; letter-spacing: 0.06em;
+}
+.divider-or::before, .divider-or::after { content: ''; flex: 1; height: 1px; background: #eee; }
+
+/* ---- Top bar ---- */
+.topbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 20px; background: white; border-bottom: 1px solid #eee;
+}
+.topbar .user { font-size: 13px; color: #666; }
+
+/* ---- Project list ---- */
+.list-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.project-card {
+  background: white; border-radius: 10px; padding: 16px 20px; margin-bottom: 10px;
+  display: flex; justify-content: space-between; align-items: center;
+  cursor: pointer; border: 1px solid #eee;
+}
+.project-card:hover { border-color: #4b3fce; }
+.project-title { font-weight: 600; }
+.project-meta { font-size: 12px; color: #888; margin-top: 4px; }
+.empty-state { text-align: center; padding: 60px 20px; color: #888; }
+
+.pill {
+  display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px;
+  border-radius: 999px; text-transform: uppercase; letter-spacing: 0.03em;
+}
+.pill-draft { background: #eee; color: #666; }
+.pill-progress { background: #fff3cd; color: #8a6d00; }
+.pill-done { background: #d4edda; color: #1e7e34; }
+
+.mini-steps { display: flex; gap: 3px; margin-top: 6px; }
+.mini-step { width: 18px; height: 4px; border-radius: 2px; background: #e0e0e0; }
+.mini-step.done { background: #4b3fce; }
+.mini-step.current { background: #a7a0f0; }
+
+/* ---- Project detail ---- */
+.detail-header { margin-bottom: 20px; }
+.detail-header h1 { margin-bottom: 4px; }
+.book-text-box {
+  background: white; border: 1px solid #eee; border-radius: 10px; padding: 16px;
+  max-height: 200px; overflow-y: auto; font-size: 13px; line-height: 1.6;
+  white-space: pre-wrap; color: #444; margin-bottom: 24px;
+}
+
+.stepper { display: flex; gap: 8px; margin-bottom: 24px; }
+.step-pill {
+  flex: 1; text-align: center; padding: 10px 4px; border-radius: 8px;
+  font-size: 12px; font-weight: 600; background: #eee; color: #999;
+}
+.step-pill.done { background: #d4edda; color: #1e7e34; }
+.step-pill.current { background: #4b3fce; color: white; }
+.step-pill.error { background: #f8d7da; color: #a01c2b; }
+
+.card-section { margin-bottom: 28px; }
+.card-section h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.03em; color: #666; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 14px; }
+.item-card { background: white; border: 1px solid #eee; border-radius: 10px; padding: 14px; }
+.item-card img { width: 100%; border-radius: 6px; margin-bottom: 8px; background: #f0f0f0; }
+.item-card .name { font-weight: 700; margin-bottom: 4px; }
+.item-card .prompt { font-size: 12px; color: #777; }
+.img-placeholder {
+  width: 100%; aspect-ratio: 1; border-radius: 6px; margin-bottom: 8px;
+  background: #f0f0f0; display: flex; align-items: center; justify-content: center;
+  font-size: 11px; color: #999;
+}
+
+.style-box { background: white; border: 1px solid #eee; border-radius: 10px; padding: 16px; font-size: 14px; }
+
+.action-bar { background: white; border: 1px solid #eee; border-radius: 10px; padding: 20px; text-align: center; }
+.action-bar.running { background: #fdf6e3; border-color: #f0d68a; }
+.action-bar.error { background: #fdecea; border-color: #f0a5a0; }
+.running-label { font-size: 13px; color: #8a6d00; margin-bottom: 10px; }
+.error-label { font-size: 13px; color: #a01c2b; margin-bottom: 10px; }
+.spinner {
+  display: inline-block; width: 14px; height: 14px; border: 2px solid #ddd;
+  border-top-color: #4b3fce; border-radius: 50%; animation: spin 0.8s linear infinite;
+  margin-right: 8px; vertical-align: -2px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.stuck-notice {
+  background: #fff3cd; border: 1px solid #f0d68a; border-radius: 8px;
+  padding: 12px; font-size: 13px; margin-bottom: 12px; color: #8a6d00;
+}
+
+.style-input { margin-bottom: 12px; text-align: left; }
