@@ -1,0 +1,250 @@
+TAP version 13
+# Subtest: CHARACTERS step truncates an over-cap provider response to 2, and flags lastWarning
+ok 1 - CHARACTERS step truncates an over-cap provider response to 2, and flags lastWarning
+  ---
+  duration_ms: 54.368357
+  type: 'test'
+  ...
+# Subtest: PORTRAITS step only requests images for the capped character list, not the raw provider output
+ok 2 - PORTRAITS step only requests images for the capped character list, not the raw provider output
+  ---
+  duration_ms: 50.805848
+  type: 'test'
+  ...
+# Subtest: CHAPTERS step truncates an over-cap provider response to 1
+ok 3 - CHAPTERS step truncates an over-cap provider response to 1
+  ---
+  duration_ms: 51.708234
+  type: 'test'
+  ...
+# Subtest: enforceCharacterCap leaves 2 or fewer characters untouched
+ok 4 - enforceCharacterCap leaves 2 or fewer characters untouched
+  ---
+  duration_ms: 0.951038
+  type: 'test'
+  ...
+# Subtest: enforceCharacterCap truncates 3+ characters down to 2
+ok 5 - enforceCharacterCap truncates 3+ characters down to 2
+  ---
+  duration_ms: 0.99002
+  type: 'test'
+  ...
+# Subtest: enforceChapterCap truncates 2+ chapters down to 1
+ok 6 - enforceChapterCap truncates 2+ chapters down to 1
+  ---
+  duration_ms: 0.136725
+  type: 'test'
+  ...
+# Subtest: enforceCap throws on non-array input rather than silently coercing
+ok 7 - enforceCap throws on non-array input rather than silently coercing
+  ---
+  duration_ms: 0.312315
+  type: 'test'
+  ...
+# Subtest: caps are exactly 2 characters / 1 chapter, matching §03
+ok 8 - caps are exactly 2 characters / 1 chapter, matching §03
+  ---
+  duration_ms: 0.107664
+  type: 'test'
+  ...
+# Subtest: currentStep returns STYLE for a freshly created project
+ok 9 - currentStep returns STYLE for a freshly created project
+  ---
+  duration_ms: 1.189418
+  type: 'test'
+  ...
+# Subtest: currentStep returns null once DONE
+ok 10 - currentStep returns null once DONE
+  ---
+  duration_ms: 0.283995
+  type: 'test'
+  ...
+# Subtest: currentStep tracks each intermediate status correctly
+ok 11 - currentStep tracks each intermediate status correctly
+  ---
+  duration_ms: 0.122265
+  type: 'test'
+  ...
+# Subtest: overallStatusLabel: Draft / In progress / Done
+ok 12 - overallStatusLabel: Draft / In progress / Done
+  ---
+  duration_ms: 0.16489
+  type: 'test'
+  ...
+# Subtest: stepClass marks earlier steps done and the active one current
+ok 13 - stepClass marks earlier steps done and the active one current
+  ---
+  duration_ms: 0.143867
+  type: 'test'
+  ...
+# Subtest: stepClass shows error when the current step has a lastError
+ok 14 - stepClass shows error when the current step has a lastError
+  ---
+  duration_ms: 0.088413
+  type: 'test'
+  ...
+# Subtest: stepClass shows error (not "current") when the running step is stale
+ok 15 - stepClass shows error (not "current") when the running step is stale
+  ---
+  duration_ms: 1.25569
+  type: 'test'
+  ...
+# Subtest: stepClass shows plain "current" when running and not stale
+ok 16 - stepClass shows plain "current" when running and not stale
+  ---
+  duration_ms: 0.182494
+  type: 'test'
+  ...
+# Subtest: isValidEmail rejects obviously malformed input
+ok 17 - isValidEmail rejects obviously malformed input
+  ---
+  duration_ms: 0.552972
+  type: 'test'
+  ...
+# Subtest: isValidEmail accepts a normal address
+ok 18 - isValidEmail accepts a normal address
+  ---
+  duration_ms: 0.391564
+  type: 'test'
+  ...
+# Subtest: saveImage writes real bytes to disk and returns a url, not the data itself
+ok 19 - saveImage writes real bytes to disk and returns a url, not the data itself
+  ---
+  duration_ms: 2.453137
+  type: 'test'
+  ...
+# Subtest: saveImage actually writes decodable bytes matching the input
+ok 20 - saveImage actually writes decodable bytes matching the input
+  ---
+  duration_ms: 0.649221
+  type: 'test'
+  ...
+# Subtest: saveImage picks the correct extension per mime type
+ok 21 - saveImage picks the correct extension per mime type
+  ---
+  duration_ms: 0.815701
+  type: 'test'
+  ...
+# Subtest: saveImage with the same filename overwrites rather than accumulating files (retry behavior)
+ok 22 - saveImage with the same filename overwrites rather than accumulating files (retry behavior)
+  ---
+  duration_ms: 0.87126
+  type: 'test'
+  ...
+# Subtest: deleteProjectImages removes the whole project directory without throwing if it never existed
+ok 23 - deleteProjectImages removes the whole project directory without throwing if it never existed
+  ---
+  duration_ms: 1.874628
+  type: 'test'
+  ...
+# Subtest: portraits land independently as each finishes, not sequentially / not all at once
+ok 24 - portraits land independently as each finishes, not sequentially / not all at once
+  ---
+  duration_ms: 604.579705
+  type: 'test'
+  ...
+# Subtest: an orphaned attempt, resolving after a stale-retry has already succeeded, does not overwrite the new result
+ok 25 - an orphaned attempt, resolving after a stale-retry has already succeeded, does not overwrite the new result
+  ---
+  duration_ms: 175.196917
+  type: 'test'
+  ...
+# Subtest: an orphaned attempt that FAILS after being superseded does not mark the new attempt as failed
+ok 26 - an orphaned attempt that FAILS after being superseded does not mark the new attempt as failed
+  ---
+  duration_ms: 174.00732
+  type: 'test'
+  ...
+# Subtest: newProject starts at CREATED / IDLE
+ok 27 - newProject starts at CREATED / IDLE
+  ---
+  duration_ms: 1.545465
+  type: 'test'
+  ...
+# Subtest: claimStep enforces order: cannot skip ahead
+ok 28 - claimStep enforces order: cannot skip ahead
+  ---
+  duration_ms: 0.671088
+  type: 'test'
+  ...
+# Subtest: claimStep succeeds for the correct next step and flips to RUNNING
+ok 29 - claimStep succeeds for the correct next step and flips to RUNNING
+  ---
+  duration_ms: 0.221066
+  type: 'test'
+  ...
+# Subtest: claimStep rejects a second concurrent call for the same step (no duplicate calls)
+ok 30 - claimStep rejects a second concurrent call for the same step (no duplicate calls)
+  ---
+  duration_ms: 0.212262
+  type: 'test'
+  ...
+# Subtest: completeStep advances status and resets stepState
+ok 31 - completeStep advances status and resets stepState
+  ---
+  duration_ms: 0.242427
+  type: 'test'
+  ...
+# Subtest: full happy path advances through all five steps to DONE
+ok 32 - full happy path advances through all five steps to DONE
+  ---
+  duration_ms: 0.327719
+  type: 'test'
+  ...
+# Subtest: caps (2 characters / 1 chapter) are NOT this module's job — documented boundary
+ok 33 - caps (2 characters / 1 chapter) are NOT this module's job — documented boundary
+  ---
+  duration_ms: 0.136409
+  type: 'test'
+  ...
+# Subtest: isStale is false for a freshly claimed step
+ok 34 - isStale is false for a freshly claimed step
+  ---
+  duration_ms: 0.09567
+  type: 'test'
+  ...
+# Subtest: isStale is true once STALE_RUNNING_MS has elapsed
+ok 35 - isStale is true once STALE_RUNNING_MS has elapsed
+  ---
+  duration_ms: 0.263974
+  type: 'test'
+  ...
+# Subtest: claimStep on a stale step throws STALE, not ALREADY_RUNNING
+ok 36 - claimStep on a stale step throws STALE, not ALREADY_RUNNING
+  ---
+  duration_ms: 0.737534
+  type: 'test'
+  ...
+# Subtest: clearStaleStep resets state without touching status or generated data
+ok 37 - clearStaleStep resets state without touching status or generated data
+  ---
+  duration_ms: 0.237201
+  type: 'test'
+  ...
+# Subtest: clearStaleStep refuses to clear a step that is not actually stale
+ok 38 - clearStaleStep refuses to clear a step that is not actually stale
+  ---
+  duration_ms: 0.154841
+  type: 'test'
+  ...
+# Subtest: failStep resets stepState for retry, without touching status
+ok 39 - failStep resets stepState for retry, without touching status
+  ---
+  duration_ms: 0.096848
+  type: 'test'
+  ...
+# Subtest: claimStep on a DONE project throws DONE
+ok 40 - claimStep on a DONE project throws DONE
+  ---
+  duration_ms: 0.089837
+  type: 'test'
+  ...
+1..40
+# tests 40
+# suites 0
+# pass 40
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1601.314504
