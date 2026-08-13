@@ -16,7 +16,12 @@
 
 ## Addressing stale-step
 
-> The assessment did mentioned 
+> Claude mentioned the terms never get stuck needs to communicate well with the terms still running and proposed to set it to 90 seconds. And i agree with it since when i was using the Notebook to run the generation, an image took around a minute to fully generate. Setting this number is reasonable rather than 10-30s like the example demo. Cost : chosen for simplicity, even though it's not the most precise per-step choice
+
+## Why Nano Banana Lite 2 Lite and not other image model
+
+> I tried out a few models on my own API keys to see if the quality or the speed differs and while true some models process it faster than another. The quality stays pretty much the same. Cost: Speed traded for cost although the difference in speed is not too large.
+> I advice you look into the video attachment to see why i reach this conclusion. (or you can follow this link to Youtube to not download anything)
 
 ## The things i would change or add if i had 1 more day (or if there were no constraint of the assessment or finance)
 
