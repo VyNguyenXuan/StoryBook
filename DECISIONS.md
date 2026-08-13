@@ -14,6 +14,9 @@
 
 > Claude give me the idea of having to duplicate the entire process but as a mock version to see if it could work as its intended to. At first i find it unessessary as using a mock key on the main run would be sufficient but later realize such option is both money wasting and not efficient as i cannot know what happens after the style generated
 
+## Addressing stale-step
+
+> The assessment did mentioned 
 
 ## The things i would change or add if i had 1 more day (or if there were no constraint of the assessment or finance)
 
@@ -21,4 +24,10 @@
 
 > Due to the restriction of keeping things at is, plain and simple, i find myself hard to ignore the part of the API calling for reading the book context in the given notebook. What it is doing unnecessarily is re-reading the entire book and not just only 1 chapter where it is needed. Resulting in a waste of free token used. This has been tested multiple times from my own self which could also be seen in the video attachment. Having a block of code to prevent it from re-reading the entire book would be a so much better option to do both for assessment or real life projects.
 
-> I cannot afford built-in Claude Code in VSC, yes i did use Clade to help me to code but it is from the web and the app version of it. So its not possible for me to show .claude/ file.
+> This involves in more of a QOL feature on the web, over deliever it might or not but i find that having a button to download the image after it is generated works wonders (you could still do things like open the image in a new tab and download it but too much work when a button could have done it faster)
+
+> Since i started out on the AI Engineer path, i found an idea of insteading of reading or typing an entire book, why not just add a feature where it just reverse it? prompts on generating the characters you want to make , the scenery and actions and ask the app to generate the story. This makes the app fully all generated and the model for doing so is quite popular as well.
+
+> I cannot afford built-in Claude Code in VSC, yes i did use Clade to help me to code but it is from the web and the app version of it. So its not possible for me to show .claude/ file. If I did, i would have no problem sending the file
+
+> I skipped the entire bonus section, as i have not much time to finish this even if i want to ask for 1 day extension because of IRL workload other that this. But if i were to pick a few to do, i would honestly try to deal with the Subagents, the retry storing and the more characters. While in these 3 i already done 1 of them, i decided that showing it is not worth as even if its a bonus, i feel like its just increasing a single digit.
