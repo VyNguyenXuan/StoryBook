@@ -21,7 +21,7 @@
 ## Why Nano Banana Lite 2 Lite and not other image model
 
 > I tried out a few models on my own API keys to see if the quality or the speed differs and while true some models process it faster than another. The quality stays pretty much the same. Cost: Speed traded for cost although the difference in speed is not too large.
-> I advice you look into the video attachment to see why i reach this conclusion. (or you can follow this link to Youtube to not download anything)
+> I advice you look into the video attachment to see why i reach this conclusion.
 
 ## The things i would change or add if i had 1 more day (or if there were no constraint of the assessment or finance)
 
