@@ -1,0 +1,24 @@
+## Identify which Gemini API calls in the pipeline are actually billed vs free
+
+ > The reference notebook (Book_illustration.ipynb) states that gemini-2.5-flash-image has a free tier and doesn't require billing. When I ran it, I got a 429 quota error with limit: 0 on every image model I tried, including that one. After checking Google's current rate-limit docs and my own project's live quota page, it looks like this claim is now outdated — none of the current Gemini image-generation models have free-tier access as of this month. To make real image-generation calls at all, I need to enable billing resulting on using Gemini 3.6 Flash as the text model and Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image) as the image model. Cost: roughly 2$ for 3 separate runs.
+
+## Deciding on how to save the data
+
+> I proposed that since the assessment did mention the possibility of a Json file able to hold the accounts as well as the information of the work done since the test is relatively small scale, Claude did push back on the approach as doing SQLite might just be a better approach even speaking on this situation which is true. But i decided to stick with the json file as it has already fulfilled the criteria plus the advantage of it having no cost which even more allign of what im trying. Cost: Trading scaling for visibility and stability when running outside of my own device.
+
+## Splitting `status` and `stepState`
+
+> This is not from either side ideas since this is already an example made from the given assessment, however i do find it needed to be add since it's obviously correct for "resumable, no duplicate calls, specific in-progress state". Cost: two fields to keep consistent and a stranded [RUNNING] needs a staleness threshold to ever clear.
+
+## Creating a mock provider
+
+> Claude give me the idea of having to duplicate the entire process but as a mock version to see if it could work as its intended to. At first i find it unessessary as using a mock key on the main run would be sufficient but later realize such option is both money wasting and not efficient as i cannot know what happens after the style generated
+
+
+## The things i would change or add if i had 1 more day (or if there were no constraint of the assessment or finance)
+
+> I'd have used SQLite instead of Json now that the project is almost finish. while its true that reading/running a Json file is more simple and works. For the project if this were to apply on a larger scale (not to the point where Docker is needed) then comparing between those 2, SQLite is more preferable on almost all cases.
+
+> Due to the restriction of keeping things at is, plain and simple, i find myself hard to ignore the part of the API calling for reading the book context in the given notebook. What it is doing unnecessarily is re-reading the entire book and not just only 1 chapter where it is needed. Resulting in a waste of free token used. This has been tested multiple times from my own self which could also be seen in the video attachment. Having a block of code to prevent it from re-reading the entire book would be a so much better option to do both for assessment or real life projects.
+
+> I cannot afford built-in Claude Code in VSC, yes i did use Clade to help me to code but it is from the web and the app version of it. So its not possible for me to show .claude/ file.
